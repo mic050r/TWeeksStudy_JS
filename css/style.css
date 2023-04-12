@@ -5,17 +5,83 @@
     font-style: normal;
 }
 
+
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    height: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0 24px;
+    background: rgb(254,242,244);
+    background: linear-gradient(180deg, rgba(254,242,244,1) 21%, rgba(252,200,209,1) 35%, rgba(255,171,171,1) 65%, rgba(209,77,114,1) 91%);
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'NeoDunggeunmoPro-Regular';
 }
+
+
 
 button {
     cursor: pointer;
 }
+
+.card {
+    width: 100%;
+    padding: 50px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 32px;
+}
+
+.card h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.form {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.form input, .form button {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.form input {
+    border: 2px solid #FFABAB;
+}
+
+.form button {
+    width: 100%;
+    height: 50px;
+    border: 0;
+    background-color: #D14D72;
+    color: #FEF2F4;
+}
+
+@media (width >= 500px) {
+    body {
+        padding: 0;
+    }
+
+    .card {
+        margin: 0;
+        width: 400px;
+    }
+}
+
