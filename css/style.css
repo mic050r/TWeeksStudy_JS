@@ -1,7 +1,7 @@
 @font-face {
-    font-family: 'NeoDunggeunmoPro-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -18,14 +18,11 @@ body {
     place-items: center;
     margin: 0;
     padding: 0 24px;
-    background: rgb(254,242,244);
-    background: linear-gradient(180deg, rgba(254,242,244,1) 21%, rgba(252,200,209,1) 35%, rgba(255,171,171,1) 65%, rgba(209,77,114,1) 91%);
+    background-image: url(background.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: 'NeoDunggeunmoPro-Regular';
+    font-family: 'TheJamsil5Bold';
 }
-
-
 
 button {
     cursor: pointer;
@@ -50,27 +47,30 @@ button {
 
 .form {
     width: 100%;
-    margin: 0;
+    margin: 50px 50px 0 0;
     display: grid;
     gap: 10px;
 }
 
 .form input, .form button {
     width: 100%;
-    height: 100%;
+    height: 70%;
     padding: 10px;
+    margin-top: 20px;
+    font-family: 'TheJamsil5Bold';
     border-radius: 10px;
 }
 
-.form input {
-    border: 2px solid #FFABAB;
+.form div input {
+    border: 2px solid #19A7CE;
 }
 
 .form button {
     width: 100%;
     height: 50px;
     border: 0;
-    background-color: #D14D72;
+    background-color: #146C94;
+    font-family: 'TheJamsil5Bold';
     color: #FEF2F4;
 }
 
