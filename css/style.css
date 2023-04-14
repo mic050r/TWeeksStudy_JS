@@ -5,11 +5,14 @@
     font-style: normal;
 }
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+@keyframes pan {
+    100% { background-position: 15% 50%;}
 }
 
 body {
@@ -22,6 +25,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'TheJamsil5Bold';
+    animation: pan 6s infinite alternate linear;
 }
 
 button {
