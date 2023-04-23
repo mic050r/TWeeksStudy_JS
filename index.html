@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css\style.css">
     <script src="https://kit.fontawesome.com/5003ee7f8f.js" crossorigin="anonymous"></script>
+    <script defer src="js\index.js"></script>
     <title>Data Unit Converter</title>
 </head>
 <body>
@@ -14,12 +15,12 @@
     <div class="card">
         <form class="form">
             <div class="left">
-                    <select name="input" id="input_selector">
-                        <option value="bit">bit</option>
-                        <option value="byte">byte</option>
-                        <option value="kb">kb</option>
-                        <option value="mb">mb</option>
-                    </select>
+                <select name="input" id="input_selector">
+                    <option value="bit">bit</option>
+                    <option value="byte">byte</option>
+                    <option value="kb">kb</option>
+                    <option value="mb">mb</option>
+                </select>
                 <input type="text" placeholder="변환하려는 값" id="input_text">
                 <i class="fa-solid fa-arrow-down"></i>
                 <select name="output" id="output_selector">
