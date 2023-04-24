@@ -1,5 +1,6 @@
 const inputSelector = document.querySelector('#input_selector');
 const outputSelector = document.querySelector('#output_selector');
+const changeBtn = document.querySelector('changeBtn');
 
 inputSelector.addEventListener('change', function() {
     let selectedValue = inputSelector.value;
@@ -10,3 +11,4 @@ outputSelector.addEventListener('change', function() {
     let selectedValue = outputSelector.value;
     console.log(selectedValue);
 });
+
