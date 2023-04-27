@@ -11,16 +11,16 @@ function getValue(element){
 
 function convertBitTo(byteType, bits) {
     const byte = bits / 8;
-    if (byteType === 'B') {
-        return byte + ' B';
+    if (byteType === 'byte') {
+        return byte + ' byte';
     }
     const kb = byte / 1024;
-    if (byteType === 'KB') {
-        return kb + ' KB';
+    if (byteType === 'kb') {
+        return kb + ' kb';
     }
     const mb = kb / 1024;
-    if (byteType === 'MB') {
-        return mb + ' MB';
+    if (byteType === 'mb') {
+        return mb + ' mb';
     }
     return 'Invalid type';
 }
@@ -33,3 +33,9 @@ outputSelector.addEventListener('change', function() {
     getValue(outputSelector);
 });
 
+changeBtn.addEventListener('click', function() {
+    var byteType = getValue(outputSelector);
+    console.log(byteType);
+    var bits = parseInt(inputText.value);
+    console.log(convertBitTo(byteType, bits));
+} );
