@@ -9,7 +9,21 @@ function getValue(element){
     return value;
 }
 
-
+function convertBitTo(byteType, bits) {
+    const byte = bits / 8;
+    if (byteType === 'B') {
+        return byte + ' B';
+    }
+    const kb = byte / 1024;
+    if (byteType === 'KB') {
+        return kb + ' KB';
+    }
+    const mb = kb / 1024;
+    if (byteType === 'MB') {
+        return mb + ' MB';
+    }
+    return 'Invalid type';
+}
 
 inputSelector.addEventListener('change', function() {
     getValue(inputSelector);
