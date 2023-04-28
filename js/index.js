@@ -35,7 +35,6 @@ outputSelector.addEventListener('change', function() {
 
 changeBtn.addEventListener('click', function() {
     var byteType = getValue(outputSelector);
-    console.log(byteType);
     var bits = parseInt(inputText.value);
-    console.log(convertBitTo(byteType, bits));
+    outputText.value = convertBitTo(byteType, bits);
 } );
