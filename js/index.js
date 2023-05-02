@@ -10,6 +10,9 @@ function getValue(element){
 }
 
 function convertBitTo(byteType, bits) {
+    if(byteType == "bit"){
+        return bits;
+    }
     const byte = bits / 8;
     if (byteType === 'byte') {
         return byte + ' byte';
@@ -25,16 +28,37 @@ function convertBitTo(byteType, bits) {
     return 'Invalid type';
 }
 
-inputSelector.addEventListener('change', function() {
-    getValue(inputSelector);
-});
-
-outputSelector.addEventListener('change', function() {
-    getValue(outputSelector);
-});
+function convertByteTo(byteType, bytes) {
+    if(byteType == "byte"){
+        return bytes;
+    }
+    const bit = bytes * 8;
+    if (byteType === 'bit') {
+        return bit + ' bit';
+    }
+    const kb = bytes / 1024;
+    if (byteType === 'kb') {
+        return kb + ' kb';
+    }
+    const mb = kb / 1024;
+    if (byteType === 'kb') {
+        return mb + ' kb';
+    }
+    return 'Invalid type';
+}
 
 changeBtn.addEventListener('click', function() {
+
     var byteType = getValue(outputSelector);
-    var bits = parseInt(inputText.value);
-    outputText.value = convertBitTo(byteType, bits);
+    var values = parseInt(inputText.value);
+    var returnValue = 0;
+
+    if(getValue(inputSelector) == "bit"){
+        returnValue = convertBitTo(byteType, values);
+    }else if(getValue(inputSelector) == "byte"){
+        returnValue = convertByteTo(byteType, values);
+    }
+
+    outputText.value = returnValue
+    
 } );
