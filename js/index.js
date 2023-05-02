@@ -10,41 +10,31 @@ function getValue(element){
 }
 
 function convertBitTo(byteType, bits) {
-    if(byteType == "bit"){
+    if(byteType == 'bit'){
         return bits;
+    }else if (byteType === 'byte') {
+        return bits / 8 + ' byte';
+    } else if (byteType === 'kb') {
+        return bits / ( 1024 * 8 )+ ' kb';
+    } else if (byteType === 'mb') {
+        return bits / (1024 * 1024 * 8) + ' mb';
+    } else {
+        return 'Invalid type';
     }
-    const byte = bits / 8;
-    if (byteType === 'byte') {
-        return byte + ' byte';
-    }
-    const kb = byte / 1024;
-    if (byteType === 'kb') {
-        return kb + ' kb';
-    }
-    const mb = kb / 1024;
-    if (byteType === 'mb') {
-        return mb + ' mb';
-    }
-    return 'Invalid type';
 }
 
 function convertByteTo(byteType, bytes) {
-    if(byteType == "byte"){
-        return bytes;
+    if(byteType == 'bit'){
+        return bytes * 8 + ' bit';
+    }else if (byteType === 'byte') {
+        return bytes + ' byte';
+    } else if (byteType === 'kb') {
+        return bytes / 1024 + ' KB';
+    } else if (byteType === 'kb') {
+        return bytes / (1024 * 1024) + ' mb';
+    } else {
+        return 'Invalid type';
     }
-    const bit = bytes * 8;
-    if (byteType === 'bit') {
-        return bit + ' bit';
-    }
-    const kb = bytes / 1024;
-    if (byteType === 'kb') {
-        return kb + ' kb';
-    }
-    const mb = kb / 1024;
-    if (byteType === 'kb') {
-        return mb + ' kb';
-    }
-    return 'Invalid type';
 }
 
 changeBtn.addEventListener('click', function() {
