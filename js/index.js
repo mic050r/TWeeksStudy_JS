@@ -37,7 +37,7 @@ function convertByteTo(byteType, bytes) {
     }
 }
 
-function convertKBto(byteType, kb) {
+function convertKBTo(byteType, kb) {
     if(byteType == 'bit'){
         return kb * 8 * 1024 + ' bit';
     }else if(byteType == 'byte'){
@@ -46,6 +46,21 @@ function convertKBto(byteType, kb) {
         return kb +' kb';
     }else if(byteType == 'mb'){
         return kb / 1024 + ' mb';
+    }else{
+        return 'Invalid type';
+    }
+}
+
+function convertMBTo(byteType, mb){
+    console.log('click');
+    if(byteType == 'bit'){
+        return mb * 8 * 1024 * 1024 + ' bit';
+    }else if(byteType == 'byte'){
+        return mb * 1024 * 1024 + ' byte';
+    }else if(byteType == 'kb'){
+        return mb * 1024 +' kb';
+    }else if(byteType == 'mb'){
+        return mb + ' mb';
     }else{
         return 'Invalid type';
     }
@@ -63,8 +78,13 @@ changeBtn.addEventListener('click', function() {
     }else if(inputType == 'byte'){
         returnValue = convertByteTo(byteType, values);
     }else if(inputType == 'kb'){
-        returnValue = convertKBto(byteType, values);
+        returnValue = convertKBTo(byteType, values);
+    }else if(inputType == 'mb'){
+        returnValue == convertMBTo(byteType, values);
+    }else{
+        returnValue = 'Invalid type';
     }
-    outputText.value = returnValue
+
+    outputText.value = returnValue;
     
 } );
