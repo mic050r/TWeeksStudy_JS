@@ -37,18 +37,34 @@ function convertByteTo(byteType, bytes) {
     }
 }
 
+function convertKBto(byteType, kb) {
+    if(byteType == 'bit'){
+        return kb * 8 * 1024 + ' bit';
+    }else if(byteType == 'byte'){
+        return kb * 1024 + ' byte';
+    }else if(byteType == 'kb'){
+        return kb +' kb';
+    }else if(byteType == 'mb'){
+        return kb / 1024 + ' mb';
+    }else{
+        return 'Invalid type';
+    }
+}
+
 changeBtn.addEventListener('click', function() {
 
-    var byteType = getValue(outputSelector);
-    var values = parseInt(inputText.value);
-    var returnValue = 0;
+    let inputType = getValue(inputSelector);
+    let byteType = getValue(outputSelector);
+    let values = parseInt(inputText.value);
+    let returnValue = "";
 
-    if(getValue(inputSelector) == "bit"){
+    if(inputType == 'bit'){
         returnValue = convertBitTo(byteType, values);
-    }else if(getValue(inputSelector) == "byte"){
+    }else if(inputType == 'byte'){
         returnValue = convertByteTo(byteType, values);
+    }else if(inputType == 'kb'){
+        returnValue = convertKBto(byteType, values);
     }
-
     outputText.value = returnValue
     
 } );
