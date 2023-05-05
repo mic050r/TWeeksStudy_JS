@@ -52,7 +52,6 @@ function convertKBTo(byteType, kb) {
 }
 
 function convertMBTo(byteType, mb){
-    console.log('click');
     if(byteType == 'bit'){
         return mb * 8 * 1024 * 1024 + ' bit';
     }else if(byteType == 'byte'){
@@ -80,7 +79,7 @@ changeBtn.addEventListener('click', function() {
     }else if(inputType == 'kb'){
         returnValue = convertKBTo(byteType, values);
     }else if(inputType == 'mb'){
-        returnValue == convertMBTo(byteType, values);
+        returnValue = convertMBTo(byteType, values);
     }else{
         returnValue = 'Invalid type';
     }
