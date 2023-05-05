@@ -3,3 +3,6 @@
 
 # 실행화면
 ![image](https://github.com/hyeg0121/2WeeksStudy_JavaScript/blob/main/prototype/main.png)
+
+# 스터디 게시물
+<a href="https://hulrud.tistory.com/category/TweekS/season1%3AJS">TweekS</a>
