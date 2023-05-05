@@ -14,7 +14,6 @@
     <h4>변환하고 싶은 값을 입력하세요</h4>
     <div class="card">
         <form class="form">
-            <div class="left">
                 <select name="input" id="input_selector">
                     <option value="bit">bit</option>
                     <option value="byte">byte</option>
@@ -29,11 +28,7 @@
                     <option value="kb">kb</option>
                     <option value="mb">mb</option>
                 </select>
-                <input type="text" placeholder="변환 값" id="output_text">
-            </div>
-            <div class="right">
-                <input type="button" value="변환" id="changeBtn"/>
-            </div>
+                <input type="text" placeholder="변환 값" id="output_text" readonly>
         </form>
     </div>
 </body>

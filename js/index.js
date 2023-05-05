@@ -2,7 +2,6 @@ const inputSelector = document.querySelector('#input_selector');
 const outputSelector = document.querySelector('#output_selector');
 const inputText = document.querySelector('#input_text');
 const outputText = document.querySelector('#output_text');
-const changeBtn = document.querySelector('#changeBtn');
 
 function getValue(element){
     let value = element.value;
@@ -11,7 +10,7 @@ function getValue(element){
 
 function convertBitTo(byteType, bits) {
     if(byteType == 'bit'){
-        return bits;
+        return bits + ' bit';
     }else if (byteType === 'byte') {
         return bits / 8 + ' byte';
     } else if (byteType === 'kb') {
@@ -65,8 +64,7 @@ function convertMBTo(byteType, mb){
     }
 }
 
-changeBtn.addEventListener('click', function() {
-
+function changeValue(){
     let inputType = getValue(inputSelector);
     let byteType = getValue(outputSelector);
     let values = parseInt(inputText.value);
@@ -85,5 +83,8 @@ changeBtn.addEventListener('click', function() {
     }
 
     outputText.value = returnValue;
-    
-} );
+}
+
+inputText.addEventListener("change", changeValue);
+
+inputSelector.addEventListener("change", changeValue);

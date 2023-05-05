@@ -55,7 +55,7 @@ h4 {
 
 .form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     position: relative;
     width: 100%;
     gap: 10px;
@@ -69,16 +69,16 @@ h4 {
     margin: 30px;
 }
 
-.form .left #input_selector,  .form .left #output_selector{
+.form #input_selector, .form #output_selector{
     width: 40%;
-    height: 20%;
+    height: 40px;
     margin-bottom: 20px;
     font-family: 'Pretendard-Regular';
     border: 2px solid #19A7CE;
     border-radius: 10px;
 }
 
-.form .left #input_text, #output_text {
+.form #input_text, .form #output_text {
     border-style: none;
     border-bottom: 2px solid #19A7CE;
     margin-bottom: 20px;
