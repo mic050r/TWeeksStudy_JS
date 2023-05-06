@@ -3,11 +3,6 @@ const outputSelector = document.querySelector('#output_selector');
 const inputText = document.querySelector('#input_text');
 const outputText = document.querySelector('#output_text');
 
-function getValue(element){
-    let value = element.value;
-    return value;
-}
-
 function convertBitTo(byteType, bits) {
     if(byteType == 'bit'){
         return bits + ' bit';
@@ -65,8 +60,8 @@ function convertMBTo(byteType, mb){
 }
 
 function changeValue(){
-    let inputType = getValue(inputSelector);
-    let byteType = getValue(outputSelector);
+    let inputType = inputSelector.value;
+    let byteType = outputSelector.value;
     let values = parseInt(inputText.value);
     let returnValue = "";
 
