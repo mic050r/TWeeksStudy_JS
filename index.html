@@ -14,22 +14,27 @@
     <h4>변환하고 싶은 값을 입력하세요</h4>
     <div class="card">
         <form class="form">
-                <select name="input" id="input_selector">
-                    <option value="bit">bit</option>
-                    <option value="byte">byte</option>
-                    <option value="kb">kb</option>
-                    <option value="mb">mb</option>
-                </select>
-                <input type="text" placeholder="변환하려는 값" id="input_text">
-                <i class="fa-solid fa-arrow-down"></i>
-                <select name="output" id="output_selector">
-                    <option value="bit">bit</option>
-                    <option value="byte">byte</option>
-                    <option value="kb">kb</option>
-                    <option value="mb">mb</option>
-                </select>
-                <input type="text" placeholder="변환 값" id="output_text" readonly>
-        </form>
+            <!-- 선택 항목 -->
+            <select name="input" id="input_selector">
+                <option value="bit">bit</option>
+                <option value="byte">byte</option>
+                <option value="kb">kb</option>
+                <option value="mb">mb</option>
+            </select>
+            <!-- 입력 필드 -->
+            <input type="text" placeholder="변환하려는 값" id="input_text">
+            <!-- 화살표 -->
+            <i class="fa-solid fa-arrow-down"></i>
+            <!-- 선택 항목 -->
+            <select name="output" id="output_selector">
+                <option value="bit">bit</option>
+                <option value="byte">byte</option>
+                <option value="kb">kb</option>
+                <option value="mb">mb</option>
+            </select>
+            <!-- 반환 필드 -->
+            <input type="text" placeholder="변환 값" id="output_text" readonly>
+    </form>
     </div>
 </body>
 </html>
