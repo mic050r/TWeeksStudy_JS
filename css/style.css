@@ -23,7 +23,7 @@ body {
     align-items: center;
     margin: 0;
     padding: 0 24px;
-    background-image: url(background.svg);
+    background-image: url(../img/background.svg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Pretendard-Regular';
